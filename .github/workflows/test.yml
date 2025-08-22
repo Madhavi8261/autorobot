@@ -30,7 +30,7 @@ jobs:
       # Run Robot Framework tests
       - name: Run Robot Framework Tests
         run: |
-          robot -d results automation/google.robot
+          robot -d results autorobot/.robot
 
       # Upload results as artifacts
       - name: Upload Robot Results
