@@ -27,10 +27,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Debug folder structure (optional)
+      - name: List repo files
+        run: ls -R
+
       # Run Robot Framework tests
       - name: Run Robot Framework Tests
         run: |
-          robot -d results autorobot/code.robot
+          robot -d results code.robot
+
+      # Run Robot Framework tests
+      #- name: Run Robot Framework Tests
+       # run: |
+        #  robot -d results autorobot/code.robot
 
       # Upload results as artifacts
       - name: Upload Robot Results
